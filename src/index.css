@@ -1,3 +1,21 @@
 @import "tailwindcss";
-@import "@heroui/styles"; 
+@import "@heroui/styles";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.nav-link {
+  color: #111827;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #d91b7e;
+}
 
