@@ -1,11 +1,9 @@
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import ExploreTechnologies from "./components/Explore Technologies/Explore Technologies";
-
 import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import type { TechnologyType } from "./Type";
-import TechnologiesLoading from "./components/TechCardSkeleton/TechnologiesLoading";
 
 const Technology = async (): Promise<TechnologyType[]> => {
   const response = await fetch("/data.json");
@@ -23,10 +21,7 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <Suspense fallback={<TechnologiesLoading />}>
-        <ExploreTechnologies technologyPromise={TechnologyPromise} />
-      </Suspense>
-
+      <ExploreTechnologies technologyPromise={TechnologyPromise} />
       <Footer />
     </>
   );

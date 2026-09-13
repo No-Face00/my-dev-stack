@@ -24,7 +24,7 @@ const YourStack = ({ addStack, setAddStack }: YourStackProps) => {
   };
 
   return (
-    <div className="h-full w-full max-w-sm rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
+    <div className="h-full w-full rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
       <h3 className="text-xl font-bold text-slate-900">Your Stack</h3>
       <p className="mt-1 text-sm text-slate-400">
         {addStack.length === 0

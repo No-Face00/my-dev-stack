@@ -23,15 +23,20 @@ const ExploreTechnologies = ({ technologyPromise }: TechnologyProps) => {
         </p>
       </div>
 
-      <div className="flex items-start justify-between gap-8 pt-10">
-        <Suspense fallback={<TechnologiesLoading />}>
-          <StackSection
-            technologyPromise={technologyPromise}
-            setAddStack={setAddStack}
-          />
-        </Suspense>
+     
+      <div className="flex flex-col gap-8 pt-10 lg:flex-row lg:items-start lg:justify-between">
+        <div className="w-full lg:flex-1">
+          <Suspense fallback={<TechnologiesLoading />}>
+            <StackSection
+              technologyPromise={technologyPromise}
+              setAddStack={setAddStack}
+            />
+          </Suspense>
+        </div>
 
-        <YourStack addStack={addStack} setAddStack={setAddStack} />
+        <div className="w-full lg:w-96 lg:shrink-0">
+          <YourStack addStack={addStack} setAddStack={setAddStack} />
+        </div>
       </div>
     </div>
   );
