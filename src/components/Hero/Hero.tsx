@@ -14,18 +14,17 @@ const Hero = () => {
 
         <p className="max-w-md text-sm text-slate-600 sm:text-base font-Plus Jakarta Sans">
           Explore frontend, backend, database, and tooling options,
-          <br className="hidden md:block" /> compare them side by side, and put
-          together the stack that fits your
-          <br className="hidden md:block" /> next project.
+          <br  /> compare them side by side, and put
+          together the stack that fits your next project.
         </p>
 
         <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-          <Button className="w-full rounded-[12px] bg-[linear-gradient(to_right,#FF5722,#D81B7E_50%,#7C3AED)] px-10 py-5 text-base font-semibold sm:w-auto">
+          <Button className="w-full rounded-[12px] bg-[linear-gradient(to_right,#FF5722,#D81B7E_50%,#7C3AED)] px-10 py-5 text-base font-medium sm:w-auto">
             Explore Technologies
           </Button>
           <Button
             variant="outline"
-            className="w-full rounded-[12px] px-16 py-5 text-base font-semibold sm:w-auto"
+            className="w-full rounded-[12px] px-16 py-5 text-base font-medium sm:w-auto"
           >
             Learn More
           </Button>

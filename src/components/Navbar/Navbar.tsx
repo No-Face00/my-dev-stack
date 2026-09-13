@@ -13,7 +13,7 @@ const navItems: { icon: ComponentType<SVGProps<SVGSVGElement>>; label: string }[
 
 const Navbar = () => {
   return (
-    <nav className="relative z-50 border border-base-300 bg-base-100/90 px-5 py-3 shadow-sm backdrop-blur-md">
+    <nav className="sticky top-0 z-50 border border-base-300 bg-base-100/90 px-5 py-3 shadow-sm backdrop-blur-md">
       <div className="container mx-auto flex items-center justify-between gap-3">
         <div className="md:hidden">
           <Drawer>
