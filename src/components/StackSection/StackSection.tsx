@@ -1,18 +1,21 @@
-import React from 'react'
-import StackCard from '../StackCard/StackCard'
+import { use, useEffect, useState } from "react";
+import StackCard from "../StackCard/StackCard";
+import type { TechnologyType } from "../../Type";
 
-const StackSection = () => {
-  return (
-    <div className='grid grid-cols-3 gap-5'>
-      <StackCard/>
-      <StackCard/>
-      <StackCard/>
-      <StackCard/>
-      <StackCard/>
-      <StackCard/>
-
-    </div>
-  )
+export interface TechnologyProps {
+  technologyPromise: Promise<TechnologyType[]>;
 }
 
-export default StackSection
+const StackSection = ({ technologyPromise }: TechnologyProps) => {
+ const technologies = use(technologyPromise);
+
+  return (
+    <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3">
+      {technologies.map((technology) => (
+        <StackCard key={technology.id} technology={technology} />
+      ))}
+    </div>
+  );
+};
+
+export default StackSection;

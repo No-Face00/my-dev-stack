@@ -2,7 +2,7 @@ import React from 'react'
 
 const YourStack = () => {
   return (
-    <div className="w-1xl h-1/3 max-w-sm  rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
+    <div className="w-2xl h-1/3 max-w-sm  rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
       <h3 className="text-xl font-bold text-slate-900">Your Stack</h3>
       <p className="mt-1 text-sm text-slate-400">No technologies selected yet.</p>
 

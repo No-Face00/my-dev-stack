@@ -1,8 +1,14 @@
 
 import YourStack from "../YourStack/YourStack";
 import StackSection from "../StackSection/StackSection";
+import type { TechnologyType } from "../../Type";
 
-const ExploreTechnologies = () => {
+export interface TechnologyProps {
+  technologyPromise: Promise<TechnologyType[]>;
+ 
+}
+
+const ExploreTechnologies = ({technologyPromise } : TechnologyProps) => {
   return (
     <div className=" container mx-auto mt-30    px-5 py-8 ">
         
@@ -15,9 +21,9 @@ const ExploreTechnologies = () => {
         </p>
       </div>
 
-      <div className="flex justify-between pt-10">
+      <div className="flex justify-between pt-10 gap-8">
 
-          <StackSection/>
+          <StackSection technologyPromise ={technologyPromise} />
 
           <YourStack/>
 
