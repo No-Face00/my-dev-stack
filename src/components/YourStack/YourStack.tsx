@@ -1,5 +1,3 @@
-import React from 'react'
-
 const YourStack = () => {
   return (
     <div className="w-2xl h-1/3 max-w-sm  rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">

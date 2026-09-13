@@ -8,7 +8,7 @@ interface StackCardProps {
 
 const StackCard = ({ technology }: StackCardProps) => {
   return (
-    <div className="flex justify-between w-full max-w-sm flex-col gap-4 rounded-2xl border border-slate-100 bg-white p-5 shadow-sm transition-shadow hover:shadow-md">
+    <div className="flex h-full w-full max-w-90 flex-col justify-between gap-4 rounded-2xl border border-slate-100 bg-white p-5 shadow-sm transition-shadow hover:shadow-md">
       <div className="flex items-start justify-between">
         <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-sky-50">
           <img src={technology.icon} alt={technology.name} className="h-6 w-6 object-contain" />

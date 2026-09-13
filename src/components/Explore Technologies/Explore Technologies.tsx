@@ -21,9 +21,9 @@ const ExploreTechnologies = ({technologyPromise } : TechnologyProps) => {
         </p>
       </div>
 
-      <div className="flex justify-between pt-10 gap-8">
+      <div className="flex items-start justify-between gap-8 pt-10">
 
-          <StackSection technologyPromise ={technologyPromise} />
+          <StackSection technologyPromise={technologyPromise} />
 
           <YourStack/>
 
