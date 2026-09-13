@@ -1,38 +1,35 @@
 import { Suspense, useState } from "react";
-import ExploreTechnologies from "./components/Explore Technologies/Explore Technologies"
-import Footer from "./components/Footer/Footer"
-import Hero from "./components/Hero/Hero"
-import Navbar from "./components/Navbar/Navbar"
-import type { TechnologyType } from "./Type";
+import ExploreTechnologies from "./components/Explore Technologies/Explore Technologies";
 
+import Footer from "./components/Footer/Footer";
+import Hero from "./components/Hero/Hero";
+import Navbar from "./components/Navbar/Navbar";
+import type { TechnologyType } from "./Type";
+import TechnologiesLoading from "./components/TechCardSkeleton/TechnologiesLoading";
 
 const Technology = async (): Promise<TechnologyType[]> => {
   const response = await fetch("/data.json");
   if (!response.ok) {
     throw new Error("Failed to load players");
   }
-   
+
   return response.json();
 };
 
 function App() {
-  
-  const [TechnologyPromise] = useState(Technology())
+  const [TechnologyPromise] = useState(Technology());
 
   return (
     <>
-    
-    
       <Navbar />
-      <Hero/>
-      <Suspense fallback = {<h1>Loading...</h1>}>
+      <Hero />
+      <Suspense fallback={<TechnologiesLoading />}>
         <ExploreTechnologies technologyPromise={TechnologyPromise} />
       </Suspense>
-      
-      <Footer/>
 
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
