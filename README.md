@@ -2,6 +2,8 @@
 
 **Build Your Ideal Development Stack**
 
+🔗 **Live Demo:** [https://devstack0.netlify.app/](https://devstack0.netlify.app/)
+
 Dev Stack is a web app that helps developers explore frontend, backend, database, and tooling options side by side, and put together a technology stack that fits their next project. Browse curated technologies, add the ones you like to your personal stack, and remove them just as easily — all with a clean, responsive UI that works great on desktop and mobile.
 
 ---
