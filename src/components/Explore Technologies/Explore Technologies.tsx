@@ -27,7 +27,6 @@ const ExploreTechnologies = ({ technologyPromise }: TechnologyProps) => {
         <Suspense fallback={<TechnologiesLoading />}>
           <StackSection
             technologyPromise={technologyPromise}
-            addStack={addStack}
             setAddStack={setAddStack}
           />
         </Suspense>

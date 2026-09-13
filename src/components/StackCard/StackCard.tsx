@@ -6,13 +6,10 @@ import { toast } from "react-toastify";
 
 interface StackCardProps {
   technology: TechnologyType;
-   addStack: TechnologyType[];
-    setAddStack: Dispatch<SetStateAction<TechnologyType[]>>;
-
+  setAddStack: Dispatch<SetStateAction<TechnologyType[]>>;
 }
 
-const StackCard = ({ technology, addStack,
-    setAddStack }: StackCardProps) => {
+const StackCard = ({ technology, setAddStack }: StackCardProps) => {
   const [isSelected, setIsSelected] = useState(false);
 
   const handleSelectPlayer = () => {
